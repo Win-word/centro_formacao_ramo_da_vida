@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Formacao Ramo da Vida</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css') }}">
+
+</head>
+<body>
+    <div style="background-color: #555555;   background-image: url('img/bddiplojma.jpg') ; background-size: cover; background-repeat: no-repeat;"    class="background-verde">
+        <!--headers-->
+        <header>
+
+            <div class="conteiner">
+                <!--criando o menu-->
+                <nav>
+                    <div class="logo">
+                        <img id="imgLogo" src="img/logobg.png" alt="imagem de fundo">
+                        <a style="color:white;" href="index.html">CFR-VIDA</a>
+
+                    </div>
+                    <ul class="ul">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contcto</a></li>
+                        <li><a href="/inscricao">Increva-se</li>
+                        <li><a href="cursos.html"><button class="btn-gradiente">Cursos</button></a></li>
+
+                    </ul>
+                    <div class="menu-icon">
+                        <img src="{{url_for('static',filename='img/menu.png') }}" alt="logo menu">
+
+                    </div>
+                </nav>
+
+            
+
+
+            </div>
+        </header>
+        <!--tag main-->
+        <main>
+            <div class="conteiner">
+
+                <!--main text-->
+                <div class="main-text">
+
+                    <p style="font-size: 30px; color: white;"><b>Centro de Formacao</b></p>
+                    <p style="font-size: 40px; color: white;"><b>Ramo da Vida</b>
+                    </p>
+
+                    <div>
+                        <a href="/inscricao"><button class="btn-gradiente">Faca a Sua Inscricao</button></a>
+                        <img  src="{{url_for('static', filename='img/ligaparanos.png') }}" alt="imagem de fundo">
+                    </div>
+                    
+                </div>
+
+                <div class="main-img">
+                    <img src="{{url_for('static', filename='img/emp-bg.png') }}" alt="imagem principal">
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+    <!--aqui inicia a primeira section de info cursos-->
+
+
+    <section class="resulCurso">
+        <!--conteiner-->
+        <div class="conteiner">
+
+            <!--division of curses-->
+            <div class="division-text">
+                Formando formados capacitados para o campo de trabalho.
+
+            </div>
+            <!--and division curses-->
+
+
+            <!--separection type curses-->
+            <div class="division-numbers">
+            <p>
+                <span>7 cursos</span><br>
+                tecnicos
+
+
+            </p>
+            <p>
+                <span>2 cursos</span><br>
+                linguisticos
+
+
+            </p>
+            <p>
+                <span>8 cursos</span><br>
+                Admistrativos
+
+
+            </p>
+
+
+
+            </div>
+            <!--and separection curses-->
+
+
+        </div>
+
+        <!--fim do conteiner-->
+
+
+
+    </section>
+
+    <!--fim da section de info cursos-->
+
+
+
+
+     
+    <!-- section more curses-->
+    <section class="difeCursos">
+        <div class="conteiner">
+            <div class="curso">
+                <img src="{{url_for('static', filename='img/cursos/celetroescavadeira.jpg') }}" alt="curso eletroescavadeira">
+                <h3 class="tituloc">Eletroescavadeira</h3>
+                <p>
+                    Neste curso vais sair capacitado para operar maquinas pesadas (Curso Presencial)
+                </p>
+
+
+
+
+            </div>
+            <div class="curso">
+                <img src="{{url_for('static', filename='img/cursos/cmontagemereparacaopc.jpg') }}" alt="curso eletroescavadeira">
+                <h3 class="tituloc">Montagem e Reparacao de Computadores</h3>
+                <p>
+                    Neste curso vai aprender a montar, desmontar e reparar Computadores de  diversos tipos (Curso Online)
+                </p>
+
+
+
+
+            </div>
+            <div class="curso">
+                <img src="{{url_for('static', filename='img/cursos/cingles.jpg') }}" alt="curso de ingles">
+                <h3 class="tituloc">Ingles</h3>
+                <p>
+                    Neste curso vai ter instrutores capacitados e formados na lingua inglesa (Curso Online)
+                </p>
+
+
+
+
+            </div>
+
+
+
+
+            
+        </div>
+
+        <br>
+        <a href="cursos.html"><button>VER TODOS CURSOS</button></a>
+
+
+
+    </section>
+    <!--and more curses-->
+
+    <!-- section person om and graduectiom -->
+    <section class="grad">
+        <div class="conteiner">
+
+            <!-- imagens de graduacoes pansagem de auto scroll -->
+            <div class="img-grad">
+                <img src="{{url_for('static', filename='img/bddiploma.jpg' ) }}" >
+                
+
+
+            </div>
+            <!-- box show text about graduection -->
+            <div class="box-text-gradh" >
+                <h1 style="color: orange; font-size: 25px;">Imagens de graduacao dos nossos alunos </h1>
+                <p style="color: white;">
+                    Aqui tem algumas imagens que mostram a graduacao 
+                    de ums dos nossos alunos na graduacao, agoraa espandimos 
+                    temos cursos presencias tais com Online.
+                    <b>Tambem em ccursos online vai receber o seu diploma</b> 
+                </p>
+            </div>
+
+            <!-- and auto scroll image -->
+        </div>
+        <button>VER SOBRE GRADUACOES</button>
+    </section>
+
+    <!-- section and  -->
+    <div style="height: 50px;">
+
+    </div>
+    <section class="sc-and">
+        <h2>Centro de Formacao Ramo da Vida</h2>
+        <div class="conteiner">
+            <div>
+            
+            <h4>Cursos Mais Concoridos</h4>
+            <ul>
+
+                <li>Maquinas Pesadas</li>
+                <li>Eletricidade Auto</li>
+                <li> Ingles e Mandarim
+                </li>
+                <li>Gestao R. Humanos</li>
+            </ul>
+            </div>
+
+            <div>
+            <h4>Mais informacao sobre CFRV</h4>
+            <ul>
+                <li>Whatsapp: 862111821</li>
+                <li>Email: anselmoservic142@gmail.com</li>
+                <li>Contacto: 862111821</li>
+                <li>Local: Cidade de Chimoio
+                </li>
+                
+
+            </ul>
+            </div>
+            
+
+
+
+
+        </div>
+        <ul class="ul-social">
+            <li><a href="#"><img src="img/facebook.png" alt="icon fb"></a></li>
+            <li><a href="#"><img src="img/whatsapp.png" alt="icon wp"></a></li>
+            <li><a href="#"><img src="img/gmail.png" alt="icon Gmail"></a></li>
+
+
+        </ul>
+        <hr>
+        <b><p>@desenvolvido pela <a href="#">BSoft Tecnologias</a></p><br>
+        </b><p>aos 18/03/2025</p>
+
+    </section>
+
+    <!-- and section and -->
+
+
+
+    <script src="{{url_for('static', filename='scripts/main.js') }}"></script>
+        
+
+    </script>
+</body>
+</html>

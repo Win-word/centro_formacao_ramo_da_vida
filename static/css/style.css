@@ -1,0 +1,645 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /*decoracoes padrao do texto
+    removidas */
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins",sans-serif;
+    
+ }
+
+
+
+ :root{
+    --black: #000000;
+    --verde-escuro: #14424b;
+    --verde: #0f3240;
+    --orange: #ff7c37;
+    --degrade-btn: linear-gradient(#fe9611,#ff5c00);
+    --color-p: #a1a1a1;
+
+
+ }
+
+
+.background-verde{
+    background: var(--verde-escuro);
+
+}
+
+section,footer{
+    padding: 2.7rem 0;
+    
+}
+
+.conteiner{
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+.btn-gradiente{
+    padding: 10px 20px;
+    color: white;
+    border:none;
+    cursor: pointer;
+    background-image: var(--degrade-btn);
+
+
+
+}
+
+
+
+/* classes do site*/
+main{
+    background-color: #0f324022;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color:#ff7c3700;
+}
+
+.logo{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.ul{
+    display: flex;
+    align-items: center;
+
+
+}
+.ul li{
+    margin: 0 35px;
+    font-size: 15px;
+}
+
+.ul li a{
+    color: white;
+}
+
+
+
+header{
+    background-color: #0f324055;}
+/* class main */
+
+
+#imgLogo{
+    width: 50px;
+
+}
+
+
+
+main .conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+}
+
+.main-text{
+    width: 50%;
+    color: white;
+
+
+}
+
+.main-text h1{
+    font-size: 40px
+}
+
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.main-text div img{
+    width: 120px;
+    height: 50px;
+
+}
+
+.main-img{
+    width: 50%;
+    
+
+}
+
+.main-img img{
+    width:100%;
+
+}
+
+
+
+
+
+section button{
+    padding: 15px 4px;
+    margin: 0 5%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #ff5c00;
+}
+/*menu icon */
+
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+.resulCurso{
+    background-color: #fe9611;
+
+
+}
+
+.resulCurso .conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.resulCurso .division-text{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 100;
+    width: 50%;
+}
+
+.resulCurso .division-numbers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+}
+
+
+.resulCurso .division-numbers p{
+    margin: 0 30px;
+    font-size: 20px;
+
+}
+
+.resulCurso .division-numbers p span{
+    font-size: 30px;
+    font-weight: 600;
+
+
+}
+
+
+.boxForm{
+    width: 100%;
+    background-color: #14424b66;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: orange;
+
+}
+
+.boxForm form{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+
+
+
+}
+.boxForm form button{
+    background-color: #ff5c00;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+
+}
+
+.boxForm form select{
+    height: 40px;
+    border: none;
+
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 9px;
+
+}
+
+.boxForm form input{
+    background-color: silver;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+
+
+/* style section more curses index */
+
+.difeCursos .conteiner{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+
+.difeCursos .curso{
+    width: 90%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #14424b11;
+    margin: 10px;
+    transition: 00.3s;
+}
+
+.difeCursos .curso:hover{
+    background-color: #0a645355;
+    color:black;
+    box-shadow: 0px 10px 67px 5px #184f6d9a;
+
+}
+
+
+.difeCursos .curso img{
+    width: 100px;
+}
+
+.difeCursos .curso .tituloc{
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+
+
+/* and style mure curses */
+
+
+/* style section imagem about graduection */
+
+
+section .conteiner{
+    display: flex;
+}
+
+.grad{
+    background-color: #0f324066;
+}
+section .conteiner .img-grad img{
+    width: 100%;
+}
+
+
+
+
+section .conteiner .img-grad,section .conteiner .box-text-grad{
+    width: 50%;
+    
+}
+
+section .conteiner .box-text-grad{
+    
+    
+    padding: 10px 10px;
+    color: white;
+}
+
+section .conteiner .box-text-grad h1{
+    
+    font-size: 35px;
+    color: rgb(255, 131, 7);
+}
+
+section .conteiner .box-text-grad p{
+    
+    font-size: 20px;
+    padding: 0px 0px;
+
+}
+
+/* and section about graduection  */
+
+
+
+
+/* style section and */
+
+
+.sc-and{
+    background-color: #0f3240;
+}
+.sc-and .conteiner{
+    display: flex;
+    justify-content: space-between;
+
+}
+.sc-and .conteiner div{
+    margin: 15px 0px;
+    
+
+}
+
+.sc-and .ul-social{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    padding: 0px 10%;
+}
+
+.sc-and .ul-social img{
+    width: 50px;
+    padding: 10px;
+}
+.sc-and p a{
+    color: red;
+}
+.sc-and h2, .sc-and p{
+    color: white;
+    padding: 0px 5%;
+}
+
+
+.sc-and .conteiner li{
+    margin-top: 10px;
+}
+
+/* and style section  and */
+
+
+
+
+
+/*responsivo*/
+
+@media (max-width: 960px){
+    
+
+    section .conteiner .box-text-grad h1{
+        font-size: 30px;
+    }
+    
+
+        .menu-icon{
+            display: block;
+        }
+
+
+        .ul{
+            position: fixed;
+            width: 100%;
+            background-color: var(--verde-escuro);
+            height: 100%;
+            left: 100%;
+            top: 0%;
+            justify-content: center;
+            color: white;
+            transition: 0.3s;
+            flex-direction: column;
+
+            
+
+        }
+
+        .ul li{
+            font-size: 20px;
+            margin: 20px 0px;
+        }
+
+        
+        .ul.active{
+            left: 0%;
+        }
+
+        main .conteiner .main-img{
+            width: 70%;
+        }
+
+        
+        
+        
+        main .conteiner .main-text h1{
+            font-size: 4rem;
+        }
+
+
+        .resulCurso .conteiner{
+            flex-direction: column;
+        }
+
+        .resulCurso .division-numbers, .resulCurso .division-text{
+            width: 100%;
+            text-align: center;
+        }
+        .resulCurso .division-numbers{
+            margin-top: 17px;
+        }
+        .difeCursos .conteiner{
+            flex-direction: row;
+        }
+
+
+
+
+ 
+}
+
+
+@media (max-width: 790px){
+
+    section .conteiner .img-grad{
+        width: 100%;
+    }
+
+    section .conteiner .box-text-grad p{
+        padding: 0px 0px;
+    }
+    .difeCursos .conteiner{
+        flex-direction: column;
+    }
+
+    main .conteiner .main-text div{
+        justify-content: center;
+    }
+    .main ,.conteiner{
+        flex-direction: column;
+    }
+
+    main .conteiner .main-text{
+        text-align: center;
+    }
+
+    .difeCursos .curso{
+        width: 100%;
+        text-align: center;
+    }
+
+    .difeCursos .curso img{
+        width: 50%;
+    }
+
+    .difeCursos .curso:hover{
+        box-shadow: 0px 10px 50px 5px #184f6d77;
+    }
+
+    .sc-and .conteiner{
+        text-align: center;
+    
+    }
+    
+}
+
+
+
+@media (max-width: 600px) {
+
+    
+
+    main .conteiner .main-text h1{
+        font-size: 3.2rem;
+    }
+    main .conteiner .main-img{
+        margin-top: 40px;
+    }
+    .logo a{
+        display: none;
+    }
+
+    .conteiner{
+        padding: 0 2%;
+        margin: 0 0px;
+    }
+
+
+
+
+    .resulCurso .division-numbers p span{
+        font-size: 25px;
+    }
+
+    .difeCursos .conteiner{
+        flex-direction: column;
+    }
+
+}
+@media (max-width: 560px){
+    .main-text div img{
+        display: none;
+    }
+
+    main .main-text{
+        padding: 0%;
+        margin: 0%;
+        align-items: initial;
+        text-align: left;
+    }
+    section .conteiner .box-text-grad p{
+        font-size: 16px;
+        padding: 0px 0px;
+    }
+
+    section .conteiner .box-text-grad h1{
+        font-size: 25px;
+    }
+
+    section .conteiner .img-grad{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 455px) {
+
+    .resulCurso .division-numbers{
+        flex-direction: column;
+    }
+
+    section .conteiner .img-grad{
+        width: 100%;
+    }
+
+    section .conteiner .box-text-grad h1{
+        font-size: 25px;
+    }
+
+    section .conteiner .box-text-grad p{
+        font-size: 16px;
+        padding: 0px 0px;
+    }
+
+    .resulCurso .division-numbers p{
+        margin-top: 17px;
+    }
+
+    .boxForm form input,.boxForm form select{
+        width: 95%;
+    }
+
+    
+
+    main .conteiner .main-text h1{
+        font-size: 25px;
+        
+    }
+
+    main{
+        margin: none;
+        padding: none;
+        justify-content: none;
+    }
+
+    
+
+    .main-img{
+        width: 100%;
+    }
+    .difeCursos .curso img{
+        width: 70%;
+    }
+
+    
+}
+
+@media (max-width: 300px) {
+
+    
+
+    
+
+    main .conteiner .main-text h1{
+        font-size: 1.5rem;
+    }
+
+    
+}

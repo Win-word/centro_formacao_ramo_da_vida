@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Formacao Ramo da Vida</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css') }}">
+
+</head>
+<body>
+    <div style="background-color: #555555;   background-image: url('img/bddiplojma.jpg') ; background-size: cover; background-repeat: no-repeat;"    class="background-verde">
+        <!--headers-->
+        <header>
+
+            <div class="conteiner">
+                <!--criando o menu-->
+                <nav>
+                    <div class="logo">
+                        <img id="imgLogo" src="img/logobg.png" alt="imagem de fundo">
+                        <a style="color:white;" href="index.html">CFR-VIDA</a>
+
+                    </div>
+                    <ul class="ul">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contcto</a></li>
+                        <li><a href="inscricao.html">Increva-se</li>
+                        <li><a href="cursos.html"><button class="btn-gradiente">Cursos</button></a></li>
+
+                    </ul>
+                    <div class="menu-icon">
+                        <img src="img/menu.png" alt="logo menu">
+
+                    </div>
+                </nav>
+
+            
+
+
+            </div>
+        </header>
+        <!--tag main-->
+        <main>
+            <div class="conteiner">
+
+                <!--main text-->
+                <div class="main-text">
+
+                    <h2>Centro de Formacao</h2>
+                    <h1>Ramo da Vida
+                    </h1>
+
+                    <div>
+                        <button class="btn-gradiente">Faca a Sua Inscricao</button>
+                        <img  src="img/ligaparanos.png" alt="imagem de fundo">
+                    </div>
+
+
+
+                </div>
+
+                <div class="main-img">
+                    <div class="boxForm">
+                        <form method="post" action="/inscricao">
+                            
+                            <input placeholder="Nome: " type="text" name="nome_completo"><br>
+                            
+                            <input type="data" name="data_" placeholder="Naicimento data/mes/ano"><br>
+
+                            <label>Documento de Identidade em PDF</label>
+                            <input type="file" name="documento_foto_">
+                            <label for="">Certificado em PDF 7 a 12 class</label>
+                            <input type="file" name="certificado_foto_" >
+                            <select id="cursos" name="curso_" >
+
+                                <option value="Maquinas Pesadas">Selecionar Curso</option>
+                                <option value="Maquinas Pesadas">Retroecavadeira</option>
+                                <option value="Maquinas Pesadas">Empilhadeira</option>
+                                <option value="Maquinas Pesadas">Ingles</option>
+                                <option value="Maquinas Pesadas">Montagem de Computadores</option>
+                                <option value="Maquinas Pesadas">Gestao de R. Humanos</option>
+                                <option value="Maquinas Pesadas">Mandarim</option>
+                                <option value="Maquinas Pesadas">Tecnico de Marketing</option>
+                                <option value="Maquinas Pesadas">Gestao Ambiental</option>
+                                <option value="Maquinas Pesadas">Agricultura</option>
+                                <option value="Maquinas Pesadas">Gestao de Empresas</option>
+                                <option value="Maquinas Pesadas">Gestao de Projectos</option>
+                                <option value="Maquinas Pesadas">Informatica Basica</option>
+                                <option value="Maquinas Pesadas">Eletricidade Auto</option>
+                                <option value="Maquinas Pesadas">Higiene e Seguranca no Trabalho</option>
+                                
+                            </select><br>
+                            <button type="submit">Submeter Inscricao</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+    <!--aqui inicia a primeira section de info cursos-->
+
+
+    <section class="resulCurso">
+        <!--conteiner-->
+        <div class="conteiner">
+
+            <!--division of curses-->
+            <div class="division-text">
+                Formando formados capacitados para o campo de trabalho.
+
+            </div>
+            <!--and division curses-->
+
+
+            <!--separection type curses-->
+            <div class="division-numbers">
+            <p>
+                <span>7 cursos</span><br>
+                tecnicos
+
+
+            </p>
+            <p>
+                <span>2 cursos</span><br>
+                linguisticos
+
+
+            </p>
+            <p>
+                <span>8 cursos</span><br>
+                Admistrativos
+
+
+            </p>
+
+
+
+            </div>
+            <!--and separection curses-->
+
+
+        </div>
+
+        <!--fim do conteiner-->
+
+
+
+    </section>
+
+    <!--fim da section de info cursos-->
+
+    <section class="sc-and">
+        <h2>Centro de Formacao Ramo da Vida</h2>
+        <div class="conteiner">
+            <div>
+            
+            <h4>Cursos Mais Concoridos</h4>
+            <ul>
+
+                <li>Maquinas Pesadas</li>
+                <li>Eletricidade Auto</li>
+                <li> Ingles e Mandarim
+                </li>
+                <li>Gestao R. Humanos</li>
+            </ul>
+            </div>
+
+            <div>
+            <h4>Mais informacao sobre CFRV</h4>
+            <ul>
+                <li>Whatsapp: 862111821</li>
+                <li>Email: anselmoservic142@gmail.com</li>
+                <li>Contacto: 862111821</li>
+                <li>Local: Cidade de Chimoio
+                </li>
+                
+
+            </ul>
+            </div>
+            
+
+
+
+
+        </div>
+        <ul class="ul-social">
+            <li><a href="#"><img src="img/facebook.png" alt="icon fb"></a></li>
+            <li><a href="#"><img src="img/whatsapp.png" alt="icon wp"></a></li>
+            <li><a href="#"><img src="img/gmail.png" alt="icon Gmail"></a></li>
+
+
+        </ul>
+        <hr>
+        <b><p>@desenvolvido pela <a href="#">BSoft Tecnologias</a></p><br>
+        </b><p>aos 18/03/2025</p>
+
+    </section>
+
+    <!-- and section and -->
+
+
+
+    <script src="{{url_for('static', filename='scripts/main.js') }}">
+        
+
+    </script>
+</body>
+</html>
