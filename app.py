@@ -26,7 +26,7 @@ def enviarMSG(nome,data,docfn,certifn,curso,pathz):
     msg = MIMEMultipart()
     msg["Subject"] = "<h1>Inscricao de: "+ nome+"</h1>"
     msg["From"] = "mozlimoz0rc@gmail.com"
-    msg["To"] = "scaybuch@gmail.com"
+    msg["To"] = "anselmoservic142@gmail.com"
     password = "vqcmikhtvwmvooab"
     #msg.add_header("Content-Type", "text/html")
     msg.attach(MIMEText(todamsg,"html"))
