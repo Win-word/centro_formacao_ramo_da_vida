@@ -17,16 +17,16 @@
                 <!--criando o menu-->
                 <nav>
                     <div class="logo">
-                        <img id="imgLogo" src="img/logobg.png" alt="imagem de fundo">
-                        <a style="color:white;" href="index.html">CFR-VIDA</a>
+                        <img id="imgLogo" src="{{url_for('static',filename='img/logobg.png') }}" alt="imagem de fundo">
+                        <a style="color:white;" href="/">CFR-VIDA</a>
 
                     </div>
                     <ul class="ul">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Contcto</a></li>
+                        <li><a href="#">Contato</a></li>
                         <li><a href="/inscricao">Increva-se</li>
-                        <li><a href="cursos.html"><button class="btn-gradiente">Cursos</button></a></li>
+                        <li><a href="/cursos"><button class="btn-gradiente">Cursos</button></a></li>
 
                     </ul>
                     <div class="menu-icon">
@@ -167,7 +167,7 @@
         </div>
 
         <br>
-        <a href="cursos.html"><button>VER TODOS CURSOS</button></a>
+        <a href="/cursos"><button>VER TODOS CURSOS</button></a>
 
 
 
@@ -240,9 +240,9 @@
 
         </div>
         <ul class="ul-social">
-            <li><a href="#"><img src="img/facebook.png" alt="icon fb"></a></li>
-            <li><a href="#"><img src="img/whatsapp.png" alt="icon wp"></a></li>
-            <li><a href="#"><img src="img/gmail.png" alt="icon Gmail"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/facebook.png') }}" alt="icon fb"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/whatsapp.png') }}" alt="icon wp"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/gmail.png') }}" alt="icon Gmail"></a></li>
 
 
         </ul>

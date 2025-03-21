@@ -17,20 +17,20 @@
                 <!--criando o menu-->
                 <nav>
                     <div class="logo">
-                        <img id="imgLogo" src="img/logobg.png" alt="imagem de fundo">
-                        <a style="color:white;" href="index.html">CFR-VIDA</a>
+                        <img id="imgLogo" src="{{url_for('static',filename='img/logobg.png') }}" alt="imagem de fundo">
+                        <a style="color:white;" href="/">CFR-VIDA</a>
 
                     </div>
                     <ul class="ul">
                         <li><a href="/">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Contcto</a></li>
-                        <li><a href="inscricao.html">Increva-se</li>
-                        <li><a href="cursos.html"><button class="btn-gradiente">Cursos</button></a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="/inscricao">Increva-se</li>
+                        <li><a href="/cursos"><button class="btn-gradiente">Cursos</button></a></li>
 
                     </ul>
                     <div class="menu-icon">
-                        <img src="img/menu.png" alt="logo menu">
+                        <img src="{{url_for('static',filename='img/menu.png') }}" alt="logo menu">
 
                     </div>
                 </nav>
@@ -53,7 +53,7 @@
 
                     <div>
                         <button class="btn-gradiente">Faca a Sua Inscricao</button>
-                        <img  src="img/ligaparanos.png" alt="imagem de fundo">
+                        <img  src="{{url_for('static',filename='img/ligaparanos.png') }}" alt="imagem de fundo">
                     </div>
 
 
@@ -63,7 +63,7 @@
                 <div class="main-img">
                     <div class="boxForm">
                         <form method="post" action="/inscricao">
-                            
+                            <h3>{{titulof}}</h3>
                             <input placeholder="Nome: " type="text" name="nome_completo"><br>
                             
                             <input type="data" name="data_" placeholder="Naicimento data/mes/ano"><br>
@@ -91,7 +91,7 @@
                                 <option value="Maquinas Pesadas">Higiene e Seguranca no Trabalho</option>
                                 
                             </select><br>
-                            <button type="submit">Submeter Inscricao</button>
+                            <button type="submit" value="Upload">Submeter Inscricao</button>
                         </form>
                     </div>
                 </div>
@@ -188,9 +188,9 @@
 
         </div>
         <ul class="ul-social">
-            <li><a href="#"><img src="img/facebook.png" alt="icon fb"></a></li>
-            <li><a href="#"><img src="img/whatsapp.png" alt="icon wp"></a></li>
-            <li><a href="#"><img src="img/gmail.png" alt="icon Gmail"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/facebook.png') }}" alt="icon fb"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/whatsapp.png') }}" alt="icon wp"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/gmail.png') }}" alt="icon Gmail"></a></li>
 
 
         </ul>

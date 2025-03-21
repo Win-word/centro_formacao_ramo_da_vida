@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Formacao Ramo da Vida</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css') }}">
 
 </head>
 <body>
@@ -17,20 +17,20 @@
                 <!--criando o menu-->
                 <nav>
                     <div class="logo">
-                        <img id="imgLogo" src="img/logobg.png" alt="imagem de fundo">
+                        <img id="imgLogo" src="{{url_for('static',filename='img/logobg.png') }}" alt="imagem de fundo">
                         <a style="color:white;" href="index.html">CFR-VIDA</a>
 
                     </div>
                     <ul class="ul">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Contcto</a></li>
-                        <li><a href="inscricao.html">Increva-se</li>
-                        <li><a href="cursos.html"><button class="btn-gradiente">Cursos</button></a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="/inscricao">Increva-se</li>
+                        <li><a href="/cursos"><button class="btn-gradiente">Cursos</button></a></li>
 
                     </ul>
                     <div class="menu-icon">
-                        <img src="img/menu.png" alt="logo menu">
+                        <img src="{{url_for('static',filename='img/menu.png') }}" alt="logo menu">
 
                     </div>
                 </nav>
@@ -52,14 +52,14 @@
                     </h1>
 
                     <div>
-                        <a href="inscricao.html"><button class="btn-gradiente">Faca a Sua Inscricao</button></a>
-                        <img  src="img/ligaparanos.png" alt="imagem de fundo">
+                        <a href="/inscricao"><button class="btn-gradiente">Faca a Sua Inscricao</button></a>
+                        <img  src="{{url_for('static',filename='img/ligaparanos.png') }}" alt="imagem de fundo">
                     </div>
                     
                 </div>
 
                 <div class="main-img">
-                    <img src="img/cursos/celetroescavadeira.jpg" alt="imagem principal">
+                    <img src="{{url_for('static',filename='img/cursos/celetroescavadeira.jpg') }}" alt="imagem principal">
                 </div>
 
             </div>
@@ -124,7 +124,7 @@
     <section class="difeCursos">
         <div class="conteiner">
             <div class="curso">
-                <img src="img/esc-bg.png" alt="curso eletroescavadeira">
+                <img src="{{url_for('static',filename='img/esc-bg.png') }}" alt="curso eletroescavadeira">
                 <h3 class="tituloc">Retroescavadeira</h3>
                 <p>
                     Neste curso vais sair capacitado para operar maquinas pesadas (Curso Presencial)
@@ -135,7 +135,7 @@
 
             </div>
             <div class="curso">
-                <img src="img/cursos/cmontagemereparacaopc.jpg" alt="curso eletroescavadeira">
+                <img src="{{url_for('static',filename='img/cursos/cmontagemereparacaopc.jpg') }}" alt="curso eletroescavadeira">
                 <h3 class="tituloc">Montagem e Reparacao de Computadores</h3>
                 <p>
                     Neste curso vai aprender a montar, desmontar e reparar Computadores de  diversos tipos (Curso Online)
@@ -146,7 +146,7 @@
 
             </div>
             <div class="curso">
-                <img src="img/cursos/cingles.jpg" alt="curso de ingles">
+                <img src="{{url_for('static',filename='img/cursos/cingles.jpg') }}" alt="curso de ingles">
                 <h3 class="tituloc">Ingles</h3>
                 <p>
                     Neste curso vai ter instrutores capacitados e formados na lingua inglesa (Curso Online)
@@ -175,7 +175,7 @@
 <section class="difeCursos">
     <div class="conteiner">
         <div class="curso">
-            <img src="img/cursos/ccontabilidadebasica.jpg" alt="curso eletroescavadeira">
+            <img src="{{url_for('static',filename='img/cursos/ccontabilidadebasica.jpg') }}" alt="curso eletroescavadeira">
             <h3 class="tituloc">Contabilidade Basica</h3>
             <p>
                 Neste curso vais sair capacitado para operar maquinas pesadas (Curso Presencial)
@@ -186,7 +186,7 @@
 
         </div>
         <div class="curso">
-            <img src="img/cursos/secretariado.jpg" alt="curso eletroescavadeira">
+            <img src="{{url_for('static',filename='img/cursos/secretariado.jpg') }}" alt="curso eletroescavadeira">
             <h3 class="tituloc">Secretariado</h3>
             <p>
                 Neste curso vai aprender a montar, desmontar e reparar Computadores de  diversos tipos (Curso Online)
@@ -197,7 +197,7 @@
 
         </div>
         <div class="curso">
-            <img src="img/cursos/cgestaoderecursoshumanos.jpg" alt="curso de ingles">
+            <img src="{{url_for('static',filename='img/cursos/cgestaoderecursoshumanos.jpg') }}" alt="curso de ingles">
             <h3 class="tituloc">Gestao de R. Humanos</h3>
             <p>
                 Neste curso vai ter instrutores capacitados e formados na lingua inglesa (Curso Online)
@@ -225,7 +225,7 @@
  <section class="difeCursos">
     <div class="conteiner">
         <div class="curso">
-            <img src="img/cursos/cmandarim.jpg" alt="curso eletroescavadeira">
+            <img src="{{url_for('static',filename='img/cursos/cmandarim.jpg') }}" alt="curso eletroescavadeira">
             <h3 class="tituloc">Mandarim</h3>
             <p>
                 Neste curso vais sair capacitado para operar maquinas pesadas (Curso Presencial)
@@ -236,7 +236,7 @@
 
         </div>
         <div class="curso">
-            <img src="img/cursos/cmarketing.jpg" alt="curso eletroescavadeira">
+            <img src="{{url_for('static',filename='img/cursos/cmarketing.jpg') }}" alt="curso eletroescavadeira">
             <h3 class="tituloc">Tecnico de Marketing</h3>
             <p>
                 Neste curso vai aprender a montar, desmontar e reparar Computadores de  diversos tipos (Curso Online)
@@ -247,7 +247,7 @@
 
         </div>
         <div class="curso">
-            <img src="img/cursos/cgestaoambiental.jpeg" alt="curso de ingles">
+            <img src="{{url_for('static',filename='img/cursos/cgestaoambiental.jpeg') }}" alt="curso de ingles">
             <h3 class="tituloc">Gestao Ambiental</h3>
             <p>
                 Neste curso vai ter instrutores capacitados e formados na lingua inglesa (Curso Online)
@@ -275,7 +275,7 @@
  <section class="difeCursos">
     <div class="conteiner">
         <div class="curso">
-            <img src="img/cursos/cagricultura.jpg" alt="curso eletroescavadeira">
+            <img src="{{url_for('static',filename='img/cursos/cagricultura.jpg') }}" alt="curso eletroescavadeira">
             <h3 class="tituloc">Agricultura</h3>
             <p>
                 Neste curso vais sair capacitado para operar maquinas pesadas (Curso Presencial)
@@ -286,7 +286,7 @@
 
         </div>
         <div class="curso">
-            <img src="img/cursos/cgestaodeempresas.jpg" alt="curso eletroescavadeira">
+            <img src="{{url_for('static',filename='img/cursos/cgestaodeempresas.jpg') }}" alt="curso eletroescavadeira">
             <h3 class="tituloc">Gestao de Empresas</h3>
             <p>
                 Neste curso vai aprender a montar, desmontar e reparar Computadores de  diversos tipos (Curso Online)
@@ -297,7 +297,7 @@
 
         </div>
         <div class="curso">
-            <img src="img/cursos/cgestaodeprojectos.jpg" alt="curso de ingles">
+            <img src="{{url_for('static',filename='img/cursos/cgestaodeprojectos.jpg') }}" alt="curso de ingles">
             <h3 class="tituloc">Gestao de Projectos</h3>
             <p>
                 Neste curso vai ter instrutores capacitados e formados na lingua inglesa (Curso Online)
@@ -321,7 +321,7 @@
 <section class="difeCursos">
     <div class="conteiner">
         <div class="curso">
-            <img src="img/cursos/cinformaticabasica.jpg" alt="curso eletroescavadeira">
+            <img src="{{url_for('static',filename='img/cursos/cinformaticabasica.jpg') }}" alt="curso eletroescavadeira">
             <h3 class="tituloc">Informatica Basica</h3>
             <p>
                 Neste curso vais sair capacitado para operar maquinas pesadas (Curso Presencial)
@@ -332,7 +332,7 @@
 
         </div>
         <div class="curso">
-            <img src="img/cursos/celetricistaauto.png" alt="curso eletroescavadeira">
+            <img src="{{url_for('static',filename='img/cursos/celetricistaauto.png') }}" alt="curso eletroescavadeira">
             <h3 class="tituloc">Eletricidade Auto</h3>
             <p>
                 Neste curso vai aprender a montar, desmontar e reparar Computadores de  diversos tipos (Curso Online)
@@ -343,7 +343,7 @@
 
         </div>
         <div class="curso">
-            <img src="img/cursos/chst.jpg" alt="curso de ingles">
+            <img src="{{url_for('static',filename='img/cursos/chst.jpg') }}" alt="curso de ingles">
             <h3 class="tituloc">Higiene e Segurancas no Trabalho</h3>
             <p>
                 Neste curso vai ter instrutores capacitados e formados na lingua inglesa (Curso Online)
@@ -405,9 +405,9 @@
 
         </div>
         <ul class="ul-social">
-            <li><a href="#"><img src="img/facebook.png" alt="icon fb"></a></li>
-            <li><a href="#"><img src="img/whatsapp.png" alt="icon wp"></a></li>
-            <li><a href="#"><img src="img/gmail.png" alt="icon Gmail"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/facebook.png') }}" alt="icon fb"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/whatsapp.png') }}" alt="icon wp"></a></li>
+            <li><a href="#"><img src="{{url_for('static',filename='img/gmail.png') }}" alt="icon Gmail"></a></li>
 
 
         </ul>
@@ -423,7 +423,7 @@
 
 
 
-    <script src="scripts/main.js">
+    <script src="{{url_for('static',filename='scripts/main.js') }}">
         
 
     </script>
