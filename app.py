@@ -7,6 +7,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 from zipfile  import ZipFile
+import patoolib
 
 
 app = Flask(__name__)
@@ -36,10 +37,11 @@ def enviarMSG(nome,data,docfn,certifn,curso,pathz):
     cz = "static/docsb/"+str(nome)+(str(docfn).split(".")[0])+".zip"
 
 
-    zf = ZipFile(cz,"w")
+    #zf = ZipFile(cz,"w")
 
-    zf.write(pathz+"/"+docfn)
-    zf.write(pathz+"/"+certifn)
+    #zf.write(pathz+"/"+docfn)
+    #zf.write(pathz+"/"+certifn)
+    patoolib.create_archive(cz,(pathz+"/"+docfn,pathz+"/"+certifn))
 
 
 
