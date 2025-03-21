@@ -280,7 +280,7 @@ section button{
     cursor: pointer;
     padding: 30px;
     border-radius: 15px;
-    background-color: #14424b11;
+    background-color: #88b5beaa;
     margin: 10px;
     transition: 00.3s;
 }
@@ -294,7 +294,7 @@ section button{
 
 
 .difeCursos .curso img{
-    width: 100px;
+    width: 50%;
 }
 
 .difeCursos .curso .tituloc{

@@ -64,14 +64,14 @@
                     <div class="boxForm">
                         <form method="post" action="/inscricao" enctype="multipart/form-data">
                             <h3>{{titulof}}</h3>
-                            <input placeholder="Nome: " type="text" name="nome_completo"><br>
+                            <input placeholder="Nome: " type="text" name="nome_completo" required><br>
                             <label>Data de Naicimento: </label>
-                            <input type="date" name="data_" placeholder="Naicimento data/mes/ano"><br>
+                            <input type="date" name="data_" placeholder="Naicimento data/mes/ano" required><br>
 
                             <label>Documento de Identidade em PDF</label>
-                            <input type="file" name="documento_foto_">
+                            <input type="file" name="documento_foto_" required>
                             <label for="">Certificado em PDF 7 a 12 class</label>
-                            <input type="file" name="certificado_foto_" >
+                            <input type="file" name="certificado_foto_" required>
                             <select id="cursos" name="curso_" >
 
                                 <option value="Maquinas Pesadas">Selecionar Curso</option>
