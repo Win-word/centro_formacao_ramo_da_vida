@@ -19,7 +19,7 @@ def enviarMSG(nome,data,docf,certif,curso):
     msg = email.message.Message()
     msg["Subject"] = "Inscricao de: "+ nome
     msg["From"] = "mozlimoz0rc@gmail.com"
-    msg["To"] = "scaybuch@gmail.com"
+    msg["To"] = "anselmoservic142@gmail.com"
     password = "vqcmikhtvwmvooab"
     #msg.add_header("Content-Type", "text/html")
     msg.set_payload(todamsg)
