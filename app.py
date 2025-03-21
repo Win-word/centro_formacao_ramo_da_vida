@@ -1,14 +1,18 @@
 from flask import Flask,render_template,url_for,request
 import  smtplib
-
-import email.message
-#from email.message import EmailMessage
+import os
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 
 
 app = Flask(__name__)
 
 
-def enviarMSG(nome,data,docf,certif,curso):
+def enviarMSG(nome,data,docfn,certifn,curso):
+
+
 
 
 
@@ -16,21 +20,68 @@ def enviarMSG(nome,data,docf,certif,curso):
     
     todamsg = "nome: "+ nome+"\nData de Naicimento: "+data+"\nCurso: "+curso
 
-    msg = email.message.Message()
-    msg["Subject"] = "Inscricao de: "+ nome
+    msg = MIMEMultipart()
+    msg["Subject"] = "<h1>Inscricao de: "+ nome+"</h1>"
     msg["From"] = "mozlimoz0rc@gmail.com"
-    msg["To"] = "anselmoservic142@gmail.com"
+    msg["To"] = "scaybuch@gmail.com"
     password = "vqcmikhtvwmvooab"
     #msg.add_header("Content-Type", "text/html")
-    msg.set_payload(todamsg)
+    msg.attach(MIMEText(todamsg,"html"))
 
+    #adicionando o documento
+
+
+    argv = open("static/docsb/"+docfn,"rb")
+
+    argv_data = argv.read()
+    argv_name = argv.name
+
+    att = MIMEBase('application','octet-stream')
+    att.set_payload(argv_data)
+    encoders.encode_base64(att)
+
+    att.add_header('Content-Disposition', f"attachment; filename= {argv_name}")
+
+
+    #certificado
+    argvc = open("static/docsb/"+certifn,"rb")
+
+    argv_datac = argv.read()
+    argv_namec = argv.name
+
+    attc = MIMEBase('application','octet-stream')
+    attc.set_payload(argv_data)
+    encoders.encode_base64(attc)
+
+    attc.add_header('Content-Disposition', f"attachment; filename= {argv_namec}")
+    
+
+    msg.attach(att)
+
+    msg.attach(attc)
+
+
+
+
+
+
+
+
+
+
+
+    #msg.add_attachment(argv_data,maintype="application", subtype="octet-stream", filename= argv_name)
+
+
+
+    #enviando o credecial
     s = smtplib.SMTP('smtp.gmail.com: 587')
+    #login de credenciai
+    s.ehlo()
     s.starttls()
-
-    #login de credenciais
-
     s.login(msg["From"],password)
-    s.sendmail(msg["From"],[msg["To"]], msg.as_string().encode("utf-8"))
+    s.sendmail(msg["From"],[msg["To"]],msg.as_string())
+    s.quit()
 
     return "Inscricao Feita Com Sucesso!"
 
@@ -49,26 +100,35 @@ def inscri():
     nome = ""
     data = ""
     docf = None
+    docname= None
+    certifname= None
 
 
     if request.method == "POST":
         nome = request.form["nome_completo"]
         data = request.form["data_"]
-        docf = request.form["documento_foto_"]
-        certif = request.form["certificado_foto_"]
         curso = request.form["curso_"]
+        docf = request.files["documento_foto_"]
+        certif = request.files["certificado_foto_"]
+
+        docname = docf.filename
+
+        certifname = certif.filename
+
+        if docname == "" or certifname == "":
+            return render_template("inscricao.html",titulof = "os documentos estao Corrompidos.")
+
+        #crie uma coisa para checar a instecao
 
 
+        docf.save(os.path.join("static/docsb",docname))
+        certif.save(os.path.join("static/docsb",certifname))
         
-    else:
-        print("formulario InValido")
-    if request.method == "POST":
-
         try:
             print("nome:", nome)
-            print("doc", str(docf))
+            print("doc", str(docname))
             try:
-                respo= enviarMSG(nome,data,docf,certif,curso)
+                respo= enviarMSG(nome,data,docname,certifname,curso)
             except Exception as e:
                 respo = "Erro ao Submeter "+str(e)+""
                 print(respo)
@@ -79,6 +139,15 @@ def inscri():
             print("error")
             return render_template("inscricao.html",titulof = "Err "+str(e2) )
             print(e2)
+
+
+
+
+
+
+        
+    else:
+        print("formulario InValido")
     return render_template("inscricao.html",titulof = "Inscreva se no CFRV" )
 
 @app.route("/cursos")

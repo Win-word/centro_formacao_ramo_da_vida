@@ -62,11 +62,11 @@
 
                 <div class="main-img">
                     <div class="boxForm">
-                        <form method="post" action="/inscricao">
+                        <form method="post" action="/inscricao" enctype="multipart/form-data">
                             <h3>{{titulof}}</h3>
                             <input placeholder="Nome: " type="text" name="nome_completo"><br>
-                            
-                            <input type="data" name="data_" placeholder="Naicimento data/mes/ano"><br>
+                            <label>Data de Naicimento: </label>
+                            <input type="date" name="data_" placeholder="Naicimento data/mes/ano"><br>
 
                             <label>Documento de Identidade em PDF</label>
                             <input type="file" name="documento_foto_">
