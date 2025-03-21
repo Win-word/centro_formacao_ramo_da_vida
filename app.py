@@ -13,9 +13,7 @@ def enviarMSG(nome,data,docf,certif,curso):
 
 
 
-    dd = open(docf,"r")
-
-    print(dd)
+    
     todamsg = "nome: "+ nome+"\nData de Naicimento: "+data+"\nCurso: "+curso
 
     msg = email.message.Message()
