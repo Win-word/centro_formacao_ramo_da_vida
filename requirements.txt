@@ -1,4 +1,5 @@
 distlib==0.3.7
+zipfile==3.8
 Flask== 3.1.0
 filelock==3.18.0
 gunicorn==23.0.0
