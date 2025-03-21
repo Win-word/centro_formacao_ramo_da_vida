@@ -6,11 +6,13 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
+from zipfile  import ZipFile
+
 
 app = Flask(__name__)
 
 
-def enviarMSG(nome,data,docfn,certifn,curso):
+def enviarMSG(nome,data,docfn,certifn,curso,pathz):
 
 
 
@@ -29,21 +31,63 @@ def enviarMSG(nome,data,docfn,certifn,curso):
     msg.attach(MIMEText(todamsg,"html"))
 
     #adicionando o documento
+    #cz caminho do zip
+
+    cz = "static/docsb/"+str(nome)+(str(docfn).split(".")[0])+".zip"
 
 
-    for fl in [docfn,certifn]:
-        argv = open("static/docsb/"+fl,"rb")
+    zf = ZipFile(cz,"w")
 
-        argv_data = argv.read()
-        argv_name = argv.name
+    zf.write(pathz+"/"+docfn)
+    zf.write(pathz+"/"+certifn)
 
-        att = MIMEBase('application','octet-stream')
-        att.set_payload(argv_data)
-        encoders.encode_base64(att)
-        att.add_header('Content-Disposition', f"attachment; filename= {argv_name}")
-        msg.attach(att)
+
+
+
+    argv = open(cz,"rb")
+
+    
+
+    argv_data = argv.read()
+    argv_name = argv.name
+
+    att = MIMEBase('application','octet-stream')
+    att.set_payload(argv_data)
+    encoders.encode_base64(att)
+
+    att.add_header('Content-Disposition', f"attachment; filename= {argv_name}")
+
+
+    #certificado
+    argvc = open("static/docsb/"+certifn,"rb")
+
+    argv_datac = argv.read()
+    argv_namec = argv.name
+
+    attc = MIMEBase('application','octet-stream')
+    attc.set_payload(argv_data)
+    encoders.encode_base64(attc)
+
+    attc.add_header('Content-Disposition', f"attachment; filename= {argv_namec}")
+    
+
+    msg.attach(att)
+
+    msg.attach(attc)
+
+
+
+
+
+
+
+
+
+
 
     #msg.add_attachment(argv_data,maintype="application", subtype="octet-stream", filename= argv_name)
+
+
 
     #enviando o credecial
     s = smtplib.SMTP('smtp.gmail.com: 587')
@@ -90,16 +134,20 @@ def inscri():
             return render_template("inscricao.html",titulof = "os documentos estao Corrompidos.")
 
         #crie uma coisa para checar a instecao
+        pathfz = "static/docsb/"+str(nome)+str(docname).split(".")[0]
 
 
-        docf.save(os.path.join("static/docsb",docname))
-        certif.save(os.path.join("static/docsb",certifname))
+        os.mkdir(pathfz)
+
+
+        docf.save(os.path.join(pathfz+"/"+docname))
+        certif.save(os.path.join(pathfz+"/"+certifname))
         
         try:
             print("nome:", nome)
             print("doc", str(docname))
             try:
-                respo= enviarMSG(nome,data,docname,certifname,curso)
+                respo= enviarMSG(nome,data,docname,certifname,curso,pathfz)
             except Exception as e:
                 respo = "Erro ao Submeter "+str(e)+""
                 print(respo)
