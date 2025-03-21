@@ -40,14 +40,8 @@ def enviarMSG(nome,data,docfn,certifn,curso):
         att = MIMEBase('application','octet-stream')
         att.set_payload(argv_data)
         encoders.encode_base64(att)
-
-    att.add_header('Content-Disposition', f"attachment; filename= {argv_name}")
-
-
-    #certificado
-    
-
-    msg.attach(att)
+        att.add_header('Content-Disposition', f"attachment; filename= {argv_name}")
+        msg.attach(att)
 
     #msg.add_attachment(argv_data,maintype="application", subtype="octet-stream", filename= argv_name)
 
