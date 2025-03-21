@@ -70,7 +70,7 @@ def inscri():
             print("nome:", nome)
             print("doc", str(docf))
             try:
-                respo= enviarMSG1(nome,data,docf,certif,curso)
+                respo= enviarMSG(nome,data,docf,certif,curso)
             except Exception as e:
                 respo = "Erro ao Submeter "+str(e)+""
                 print(respo)
