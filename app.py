@@ -58,31 +58,9 @@ def enviarMSG(nome,data,docfn,certifn,curso,pathz):
     att.add_header('Content-Disposition', f"attachment; filename= {argv_name}")
 
 
-    #certificado
-    argvc = open("static/docsb/"+certifn,"rb")
-
-    argv_datac = argv.read()
-    argv_namec = argv.name
-
-    attc = MIMEBase('application','octet-stream')
-    attc.set_payload(argv_data)
-    encoders.encode_base64(attc)
-
-    attc.add_header('Content-Disposition', f"attachment; filename= {argv_namec}")
     
 
     msg.attach(att)
-
-    msg.attach(attc)
-
-
-
-
-
-
-
-
-
 
 
     #msg.add_attachment(argv_data,maintype="application", subtype="octet-stream", filename= argv_name)
