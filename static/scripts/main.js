@@ -6,14 +6,14 @@ menuIcon.addEventListener("click",()=>{
      
     if (ul.classList.contains("active")){
         ul.classList.remove("active");
-        document.querySelector(".menu-icon img").src="../img/menu.png";
+        document.querySelector(".menu-icon img").src="{{url_for('static', filename='img/close.png')}}";
 
 
 
     }else{
         
         ul.classList.add("active");
-        document.querySelector(".menu-icon img").src="/img/close.png";
+        document.querySelector(".menu-icon img").src="{{url_for('static', filename='/img/close.png')}}";
 
     }
     
