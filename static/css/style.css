@@ -127,6 +127,15 @@ main .conteiner .hdroid{
     color: white;
 }
 
+main .conteiner .bdroid{
+    display: none;
+    padding: 10px 5px;
+    color: white;
+    border: 3px solid #2964ad9e;
+    border-radius: 9px;
+    background-color: #2964a8;;
+}
+
 .main-text div{
     display: flex;
     align-items: center;
@@ -551,6 +560,11 @@ section .conteiner .box-text-grad p{
 
     main .conteiner .hdroid{
         display: block;
+    }
+
+    main .conteiner .bdroid{
+        display: block;
+        transition: 4.3s;
     }
 
 
