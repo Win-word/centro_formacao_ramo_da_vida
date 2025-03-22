@@ -124,6 +124,7 @@ main .conteiner{
 }
 main .conteiner .hdroid{
     display: none;
+    color: white;
 }
 
 .main-text div{
