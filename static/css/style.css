@@ -50,7 +50,7 @@ section,footer{
     color: white;
     border:none;
     cursor: pointer;
-    background-image: var(--degrade-btn);
+    background-color: #0706e7;
 
 
 
@@ -172,7 +172,7 @@ section button{
 }
 
 .resulCurso{
-    background-color: #fe9611;
+    background-color: #0706e7;
 
 
 }
