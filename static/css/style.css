@@ -129,11 +129,13 @@ main .conteiner .hdroid{
 
 main .conteiner .bdroid{
     display: none;
-    padding: 10px 5px;
+    padding: 15px 5px;
+    margin-bottom: 10px;
     color: white;
-    border: 3px solid #2964ad9e;
+    border: 3px solid #496a9166;
     border-radius: 9px;
     background-color: #2964a8;;
+
 }
 
 .main-text div{

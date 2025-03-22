@@ -13,7 +13,7 @@ menuIcon.addEventListener("click",()=>{
     }else{
         
         ul.classList.add("active");
-        document.querySelector(".menu-icon img").src="/static/img/close.png')}}";
+        document.querySelector(".menu-icon img").src="/static/img/close.png";
 
     }
     
