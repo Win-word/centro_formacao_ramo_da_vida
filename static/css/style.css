@@ -122,6 +122,9 @@ main .conteiner{
 .main-text h1{
     font-size: 40px
 }
+main .conteiner .hdroid{
+    display: none;
+}
 
 .main-text div{
     display: flex;
@@ -533,12 +536,20 @@ section .conteiner .box-text-grad p{
         margin-top: 40px;
     }
     .logo a{
-        display: none;
+        font-size: 20px;
     }
 
     .conteiner{
         padding: 0 2%;
         margin: 0 0px;
+    }
+
+    main .conteiner .main-text{
+        display: none;
+    }
+
+    main .conteiner .hdroid{
+        display: block;
     }
 
 
