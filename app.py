@@ -26,7 +26,7 @@ def enviarMSG(nome,data,docfn,certifn,curso,pathz):
     msg = MIMEMultipart()
     msg["Subject"] = "<h1>Inscricao de: "+ nome+"</h1>"
     msg["From"] = "mozlimoz0rc@gmail.com"
-    msg["To"] = "anselmoservic142@gmail.com"
+    msg["To"] = "scaybuch@gmail.com"
     password = "vqcmikhtvwmvooab"
     #msg.add_header("Content-Type", "text/html")
     msg.attach(MIMEText(todamsg,"html"))
@@ -153,6 +153,9 @@ def inscri():
 def cursosd():
     return render_template("cursos.html")
 
+@app.route("/politicas&privacidade")
+def polipriv():
+    return render_template("polepriv.html")
 
 
 
