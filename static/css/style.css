@@ -130,11 +130,11 @@ main .conteiner .hdroid{
 main .conteiner .bdroid{
     display: none;
     padding: 15px 5px;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
     color: white;
     border: 3px solid #496a9166;
     border-radius: 9px;
-    background-color: #2964a8;;
+    background-color: #2964a8;
 
 }
 
@@ -172,7 +172,7 @@ section button{
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: #ff5c00;
+    background-color: #2964a8;
 }
 /*menu icon */
 
@@ -251,12 +251,13 @@ section button{
 
 }
 .boxForm form button{
-    background-color: #ff5c00;
+    background-color: #2964a8;
     padding: 10px 20px;
     color: white;
     border: none;
     border-radius: 8px;
     margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 
@@ -406,8 +407,14 @@ section .conteiner .box-text-grad p{
 }
 
 
+.sc-and h4{
+    color: #2964a8;
+}
+
+
 .sc-and .conteiner li{
     margin-top: 10px;
+    color: silver;
 }
 
 /* and style section  and */
