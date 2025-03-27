@@ -411,6 +411,11 @@ section .conteiner .box-text-grad p{
     color: #2964a8;
 }
 
+.sc-and .pp{
+    color: maroon;
+    
+}
+
 
 .sc-and .conteiner li{
     margin-top: 10px;
