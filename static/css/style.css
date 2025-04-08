@@ -595,7 +595,7 @@ section .conteiner .box-text-grad p{
 }
 @media (max-width: 560px){
     .main-text div img{
-        display: none;
+        
     }
 
     main .main-text{
